@@ -1,0 +1,23 @@
+<div style="background-image: url('a.jpg');">
+<div class="container">
+    <span class="form"> 
+     <div class="alert alert-success">
+         <form [formGroup]="myForm" (ngSubmit)="register()"> 
+         <label class="form-control" style="color: red;">ID</label>
+         <input type="text" class="form-control"   [(ngModel)]="user.id"  [formControl]="id" style="color: royalblue;">
+         <span *ngIf="id.valid==false && id.touched" class="alert alert-danger">
+             Id cannot be empty
+         </span>
+         <label class="form-control" style="color: red;">Password</label>
+         <input type="password" class="form-control" [(ngModel)]="user.password" [formControl]="pass" style="color:royalblue;">
+         <span *ngIf="pass.valid==false && pass.touched" class="alert alert-danger">
+             password cannot be empty
+         </span>
+
+         <button class="btn btn-success" >Login</button>
+     </form>
+     </div>
+ </span>
+ 
+ </div>
+ </div>
